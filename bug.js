@@ -1,0 +1,1 @@
+function foo(a,b){    if(a === 0){        return b;    }else if(b === 0){        return a;    }else{        return foo(a-1, b-1);    }}console.log(foo(5,5)); //This will cause a stack overflow error because the base cases are not met when both a and b are greater than 0. The recursive call never stops and leads to a stack overflow. 
